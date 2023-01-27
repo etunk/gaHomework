@@ -1,14 +1,19 @@
 
 .exerciseHeader, .exerciseFooter, .exerciseMain {
     margin: 0 10px 10px 10px;
+    
 }
 
 .exerciseMainFeatures {
-
+display: flex;
+flex-direction: row;
+gap: 10px;
+padding-bottom: 10px;
 
 }
 
 .exerciseMainFeatures .exerciseMarketingFeature {
+    width: 50%;
 
 
 }
@@ -18,10 +23,15 @@
 }
 
 .exerciseAdditionalFeatures {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;  
 
 }
 
 .exerciseAdditionalFeatures .exerciseMarketingFeature {
+    width: 50%;
+
 
 
 }

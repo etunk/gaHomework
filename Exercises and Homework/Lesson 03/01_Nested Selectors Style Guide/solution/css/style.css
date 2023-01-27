@@ -30,37 +30,6 @@ a {
 
 
 /* Core Styles */
-.contentImage{
-  box-sizing: border-box;
-  width: 50%;
-  border: solid #131e27 3px;
-}
-.featureBox {
-  box-sizing: border-box;
-  width: 50%;
-  background: #f9e42e;
-  padding: 20px;
-}
-.featureBox h1{
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.featureBox ul, 
-.featureBox ol{
-  margin-left: 30px;
-}
-
-.featureBox strong {
-
-  background-color: #eaeaea;
-  border: #aaa 1px solid;
-  padding: 5px;
-  color: black;
-}
-
-.featureBox > *:first-child{
-  
-}
 .relaxr-corestyles p {
   font-size: 26px;
 }
@@ -69,7 +38,9 @@ a {
   font-style:italic;
   font-size: 30px;
 }
-
+.relaxr-corestyles strong {
+  font-weight:bold;
+}
 
 .relaxr-corestyles em {
   font-style:italic;
@@ -136,6 +107,7 @@ a {
 .relaxr-corestyles ol {
   list-style: decimal;
 }
+
 
 
 

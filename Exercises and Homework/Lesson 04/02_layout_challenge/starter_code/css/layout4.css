@@ -16,6 +16,9 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
 }
 
 .exerciseHeader {
+    display: flex;
+    flex-direction: row;
+    gap:30%;
 
 
 }
@@ -27,16 +30,20 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
 
 
 .exerciseHeaderNav {
-
+    
 }
 
 .exerciseHeaderNav ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    list-style: none;
 
 }
 
 .exerciseHeaderNav ul li {
-
-
+    width: 70px;
+    height: 10px;
 }
 
 
