@@ -1,28 +1,37 @@
 
-.exerciseFooter, .exerciseMain {
+.exerciseFooter, .exerciseMain, .exerciseHeader {
     margin: 0 10px 10px 10px;
 }
 
 .exerciseHeader {
-
-
+    display:flex;
+    /* justify-content: space-between; */
 }
 
 .exerciseHeaderLogo {
     width: 200px;
     height: 80px;
-
 }
 
-.exerciseHeaderNav {
 
+.exerciseHeaderNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
 }
 
 .exerciseHeaderNav ul {
-
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .exerciseHeaderNav ul li {
+    min-width: 80px;
 
 
 }
@@ -31,17 +40,23 @@
 /* Main */
 
 .exerciseMain {
+    flex:3;
+   
+
 
 }
 
 .exerciseMainLeftNav {
+    flex: 1;
 
 
 }
 
 .exerciseMainContent {
-
-
+    flex: 3;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .exerciseMainContent > * {
@@ -49,13 +64,15 @@
 }
 
 .exerciseMainContentBanner {
-
+    width:100%;
+    margin: 0 0 10px 0;
 }
 
 .exerciseMainContentSubBanner {
-
+    width: 75%;
 }
 
 .exerciseMainContentBlock {
+    flex: 25%;
 
 }

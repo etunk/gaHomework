@@ -24,6 +24,7 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
 }
 
 .exerciseHeaderLogo {
+    margin: 0 0 0 10px;
     width: 200px;
     height: 80px;
 }
@@ -38,6 +39,8 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
     gap: 10px;
     flex-direction: row;
     list-style: none;
+    margin: 0 0 0 0;
+    padding: 20px 0 0 0;
 
 }
 
@@ -48,19 +51,28 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
 
 
 .exerciseMainContent {
+    margin: 10px 0 10px 0;
+    height: 250px;
 
 }
 
 
 .exerciseAdditionalFeatures {
-
+    display: flex;
+    flex-direction: row;
+    gap:10px;
 }
 
 .exerciseAdditionalFeatures .exerciseMarketingFeature {
-
-
+    width:50%;
+    height: 150px;
 }
 
 .exerciseAdditionalFeatures .exerciseMarketingFeature:first-child {
 
 }
+footer{
+    height: 100px;
+}
+
+s

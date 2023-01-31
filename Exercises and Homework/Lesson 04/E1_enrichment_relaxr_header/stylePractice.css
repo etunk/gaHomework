@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+p {
+  font-size: 24px;
+   margin: 10px 5px;
+}
+
+.wrapper {
+  width: 900px;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  
+  background: black;
+  padding: 10px 20px;
+}
+.mainContent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex:1;
+  flex-wrap: wrap;
+}
+h1 {
+  color: yellow;
+}
+
+/* nav {
+  width:500px;
+} */
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 0;
+}
+
+li {
+  margin: 15px;
+}
+
+a {
+  color: white;
+}
+
+.devNav{
+
+}
+
+.designNav{
+  font-family: Tahoma;
+}
+
+.faqNav{
+  font-family:Tahoma;
+}
+
+.teamNav{}
+
+.blogNav{}
