@@ -4,14 +4,16 @@
 }
 
 .exerciseHeader {
-
-
-}
+    display: grid;
+    grid-template-columns: 5fr 10fr;
+    grid-gap: 250px;
+    padding-bottom: 10px;
+}   
 
 .exerciseHeaderLogo {
+    margin-left: 10px;
     width: 200px;
     height: 80px;
-
 }
 
 .exerciseHeaderNav {
@@ -19,10 +21,14 @@
 }
 
 .exerciseHeaderNav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    gap: 10px
 
 }
 
 .exerciseHeaderNav ul li {
+    list-style: none;
 
 
 }
@@ -31,16 +37,24 @@
 /* Main */
 
 .exerciseMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+
 
 }
 
 .exerciseMainLeftNav {
+    height: 1000px;
 
 
 }
 
 .exerciseMainContent {
-
+display: grid;
+grid-template-rows: 1fr 1fr 1f 1fr;
+min-height: 1000px;
+gap:10px;
 
 }
 
@@ -57,5 +71,7 @@
 }
 
 .exerciseMainContentBlock {
+    display: grid;
+    grid-auto-columns: ;
 
 }

@@ -5,8 +5,8 @@
 
 .exerciseMain {
     display:grid;
+    grid-template-columns: 60% 40%;
     gap:10px;
-    grid-template-columns: 70% 30%;
 
 }
 

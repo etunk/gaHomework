@@ -4,6 +4,10 @@
 }
 
 .exerciseMain {
+    display: grid;
+    grid-template-columns: 25fr 50fr 25fr;
+    gap: 10px;
+
 
 }
 
