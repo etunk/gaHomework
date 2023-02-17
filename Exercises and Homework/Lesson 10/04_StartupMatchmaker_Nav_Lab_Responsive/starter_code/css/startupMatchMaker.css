@@ -93,7 +93,16 @@ a {
 
 
 // Create a media query that only applies when the screen is LESS than 640px
+@media (max-width:639){
 
+    .main-nav-mobile-hide{
+        display: none;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+}
 
 /* BODY LAYOUT */
 

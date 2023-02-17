@@ -1,5 +1,5 @@
 //wait for the DOM elements to load before executing
-
+document.addEventListener('DOMContentLoaded', function(event) {
     // Create a function that runs whenever the submit button is clicked
 
         //prevent the submit button from refreshing the page
@@ -17,3 +17,5 @@
         // if the user inputs bad/angry change the CSS class to 'bad'
 
     // Listen for user interaction on the submit button.
+
+}
