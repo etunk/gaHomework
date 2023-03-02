@@ -6,27 +6,30 @@ const fruits = ["banana", "orange", "apple"];
 // 1
 // You can ask for the index number of any array item
 // Print the index of "orange" to the console
-
+console.log(fruits[1])
 
 // 2
 // Print the length of the array to the console
+console.log(fruits.length)
 
 
 // 3
 // .pop() removes the last item
 // Print the removed item and the new array to the console
-
+console.log(fruits.pop())
+console.log(fruits)
 
 // 4
 // .shift() removes the first item
 // Print both the removed item and the new array to the console
-
+console.log(fruits.shift())
+console.log(fruits)
 
 // 5
 // .push() adds whatever you pass into the method parenthesis to the end of an array
 // Add "kiwi" to the end of the array
 // Print the new array to the console
-
+co
 
 // 6
 // .unshift() adds whatever you pass into the method parenthesis to the beginning of an array

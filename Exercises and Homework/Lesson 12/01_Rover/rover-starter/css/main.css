@@ -22,9 +22,141 @@ body {
   font-family: "Cabin", sans-serif;
   font-size: 18px;
   color: #1b1f23;
-  margin:0;
-  height:auto;
-  display:block;
-  width:100%;
-  overflow-x:hidden;
+  margin: 0;
+  height: auto;
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  gap: 10px;
+}
+
+h1{
+text-align: center;
+}
+
+
+.site_header_inner {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.navigation_first {
+  display: flex;
+  margin: 0 100px 0 -15%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #1b1f23;
+}
+
+
+.sign_up {
+  display: flex;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+}
+
+.container_fixed {
+  /*background-color: red;*/
+  max-width: 1200px;
+  /* old school way to center esp without blocks... Max-Width has to be set*/
+  margin: 0 auto;
+
+}
+
+.logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.site_header img {
+  width: 180px;
+}
+
+.rover_hero_container {
+  max-height: 1000px;
+  max-width: 100%;
+  background-color: yellow;
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.hero_callout {
+  display: flex;
+  flex-direction: column;
+}
+
+.rover_facts_2col{
+  display: flex;
+}
+.rover_facts_container li{ 
+  display: flex;
+}
+
+.facts-text{
+  padding-left: 10px;
+}
+.rover_facts_container img{
+  width: 150px;
+}
+
+.rover_cta_box{
+  display: flex;
+  flex-direction: column;
+}
+.rover-cta{
+  text-align: center;
+}
+
+.rover_cta_header{
+  display: flex;
+  justify-content: center;
+}
+
+.rover_cta_header img{
+  width: 50px;
+}
+
+.rover_action_shot{
+  max-height: 800px;
+  height:100%
+}
+
+.rover_123_item_container{
+  display: flex;
+  
+  justify-content: space-between;
+
+}
+
+
+.rover_123_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.rover_123_item img{
+  max-height: 150px;
 }
