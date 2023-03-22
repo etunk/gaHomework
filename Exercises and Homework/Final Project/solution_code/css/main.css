@@ -4,7 +4,6 @@
 * {
   box-sizing: border-box;
 }
-
 .row > .column {
   padding: 0 8px;
 }
@@ -61,7 +60,7 @@
   cursor: pointer;
 }
 
-.mySlides {
+.myConstructionSlides, .myArtSlides, .myDanceSlides {
   display: none;
 }
 
@@ -119,12 +118,11 @@ img {
   color: white;
 }
 
-.demo {
+.constructionDemo, .artDemo, .danceDemo {
   opacity: 0.6;
 }
 
-.active,
-.demo:hover {
+.active, .constructionDemo:hover, .artDemo:hover, .danceDemo:hover {
   opacity: 1;
 }
 
@@ -287,6 +285,18 @@ footer .glyphicon {
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
   visibility: visible;
+}
+
+.social-link img{
+  max-width: 150px;
+}
+
+.instagram{
+  padding-bottom: 60px;
+}
+
+.page-footer{
+  padding-top: 30px;
 }
 @keyframes slide {
   0% {

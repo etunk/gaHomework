@@ -27,50 +27,95 @@ document.querySelector(".learn-more").addEventListener("click", function(){
 
 })
 
-document.querySelector(".constructionModalClick").addEventListener("click", function(){
-    document.querySelector(".constructionModal").style.display = "block";
-})
+document.querySelector(".construction-modal-trigger").addEventListener("click", function(){
+    document.getElementById("myConstructionModal").style.display = "block";})
 
-document.querySelector(".danceModalClick").addEventListener("click", function(){
-    document.querySelector(".danceModal").style.display = "block";
-})
+document.querySelector(".dance-modal-trigger").addEventListener("click", function(){
+    document.getElementById("myDanceModal").style.display = "block";})
 
-document.querySelector(".artModalClick").addEventListener("click", function(){
-    document.querySelector(".artModal").style.display = "block";
-})
+document.querySelector(".art-modal-trigger").addEventListener("click", function(){
+    document.getElementById("myArtModal").style.display = "block";})
 
   
-function closeModal() {
-    document.querySelector(".constructionModal").style.display = "none";
-    document.querySelector(".danceModal").style.display = "none";
-    document.querySelector(".artModal").style.display = "non";
+  function closeModal() {
+    document.getElementById("myDanceModal").style.display = "none";
+    document.getElementById("myArtModal").style.display = "none";
+    document.getElementById("myConstructionModal").style.display = "none";
   }
   
   var slideIndex = 1;
-  showSlides(slideIndex);
   
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusConstructionSlides(n) {
+    showConstructionSlides(slideIndex += n);
+  }
+
+function plusDanceSlides(n) {
+    showDanceSlides(slideIndex += n);
+  }
+function plusArtSlides(n) {
+    showArtSlides(slideIndex += n);
   }
   
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentConstructionSlide(n) {
+    showConstructionSlides(slideIndex = n);
+  }
+    
+function currentDanceSlide(n) {
+    showDanceSlides(slideIndex = n);
+  }
+    
+function currentArtSlide(n) {
+    showArtSlides(slideIndex = n);
   }
   
-  function showSlides(n) {
+function showConstructionSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    var constructionSlides = document.getElementsByClassName("myConstructionSlides");
+    var constructionDots = document.getElementsByClassName("constructionDemo");
+    var constructionCaptionText = document.getElementById("constructionCaption");
+    if (n > constructionSlides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = constructionSlides.length}
+    for (i = 0; i < constructionSlides.length; i++) {
+        constructionSlides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < constructionDots.length; i++) {
+        constructionDots[i].className = constructionDots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    constructionSlides[slideIndex-1].style.display = "block";
+    constructionDots[slideIndex-1].className += " active";
+    constructionCaptionText.innerHTML = constructionDots[slideIndex-1].alt;
+  }
+  function showDanceSlides(n) {
+    var i;
+    var danceSlides = document.getElementsByClassName("myDanceSlides");
+    var danceDots = document.getElementsByClassName("danceDemo");
+    var danceCaptionText = document.getElementById("danceCaption");
+    if (n > danceSlides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = danceSlides.length}
+    for (i = 0; i < danceSlides.length; i++) {
+        danceSlides[i].style.display = "none";
+    }
+    for (i = 0; i < danceDots.length; i++) {
+        danceDots[i].className = danceDots[i].className.replace(" active", "");
+    }
+    danceSlides[slideIndex-1].style.display = "block";
+    danceDots[slideIndex-1].className += " active";
+    danceCaptionText.innerHTML = danceDots[slideIndex-1].alt;
+  }
+  function showArtSlides(n) {
+    var i;
+    var artSlides = document.getElementsByClassName("myArtSlides");
+    var artDots = document.getElementsByClassName("artDemo");
+    var artCaptionText = document.getElementById("artCaption");
+    if (n > artSlides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = artSlides.length}
+    for (i = 0; i < artSlides.length; i++) {
+        artSlides[i].style.display = "none";
+    }
+    for (i = 0; i < artDots.length; i++) {
+        artDots[i].className = artDots[i].className.replace(" active", "");
+    }
+    artSlides[slideIndex-1].style.display = "block";
+    artDots[slideIndex-1].className += " active";
+    artCaptionText.innerHTML = artDots[slideIndex-1].alt;
   }

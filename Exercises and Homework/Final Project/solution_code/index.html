@@ -2,10 +2,15 @@
   TODO:
 
   FIX MODAL PIECE
+    -done
 
   ADD MY "PROJECTS" finding some guides to follow and build out
+    -dots game atags break on other pages
+    -adding YS Volunteer Signup Sheet
+    -adding YS Volunteer Portal
 
   ADD CONTACT FORMS
+    -Almost done need to link to collect info in JS
 
 -->
 
@@ -25,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -124,6 +130,7 @@
         <img src="images/yee.jpg" alt="my dog beans">
         <h4>Ball Game</h4>
         <p>Lorem ipsum dolor sit amet..</p>
+        <a href="dots/dots-landing.html" class="btn btn-warning" role="button">Play Me</a>
       </div>
       <div class="col-sm-4">
         <img src="images/yee.jpg" alt="my dog beans">
@@ -139,21 +146,21 @@
     <h4>What I have created</h4>
     <div class="row text-center slideanim">
       <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="images/yee.jpg" alt="my dog beans" class="hover-shadow cursor constructionModalClick">
+        <div class="thumbnail construction-modal-trigger">
+          <img src="images/yee.jpg" class="hover-shadow cursor">
           <p><strong>Construction</strong></p>
           <p>Yes, we built Paris</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="thumbnail">
+        <div class="thumbnail dance-modal-trigger">
           <img src="images/yee.jpg" alt="my dog beans"  class="hover-shadow cursor danceModalClick">
           <p><strong>Dance</strong></p>
           <p>We built New York</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="thumbnail">
+        <div class="thumbnail art-modal-trigger">
           <img src="images/yee.jpg" alt="my dog beans" class="hover-shadow cursor artModalClick">
           <p><strong>Digital Art</strong></p>
           <p>Yes, San Fran is ours</p>
@@ -164,187 +171,213 @@
   
   
   <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid bg-grey">
+  <div id="contact" class="container-fluid">
     <h2 class="text-center">Lets Get In Touch :D</h2>
+ 
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-        <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 ">
-        <br>
-        <br>
-        <br>
-        <br>
-      </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Whats your name?</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone number</label>
+            <input type="text" id="phone" class="form-control" placeholder="(###) ###-####" />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Whats up!</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What can I help you with?"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit form</button>
+
+        </form>
+        </div>
       <div class="col-md-6 ">
-        <br>
-        <br>
-        <br>
-        <br>
+        <row>
+          <div class="col-md-12 social-link instagram">
+            <a href="https://www.instagram.com/ethandundun" target="_blank"><img src="images/Instagram_logo.png"></a>
+          </div>
+        </row>
+        <row>
+          <div class="col-md-6 social-link">
+            <a href="https://www.facebook.com/kaka.bukaba" target="_blank"><img src="images/Facebook_logo.png"></a>
+          </div>
+          <div class="col-md-6 social-link">
+            <a href="https://www.tiktok.com/@ethandundundance" target="_blank"><img src="images/Tiktok_logo.png"></a>
+          </div>
+        </row>
+
       </div>
-      <h2 style="text-align:center">Lightbox</h2>
+    </div>
 
 
-<div id="myModal" class="constructionModal modal">
+<h2 style="text-align:center">Lightbox</h2>
+
+
+<div id="myConstructionModal" class="modal">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
-  </div>
-  <div class="modal-content">
+  </div>  <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="myConstructionSlides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myConstructionSlides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myConstructionSlides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="mySlides">
+    <div class="myConstructionSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusConstructionSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusConstructionSlides(1)">&#10095;</a>
 
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="constructionCaption"> </p>
     </div>
 
 
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      <img class="constructionDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentConstructionSlide(1)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+      <img class="constructionDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentConstructionSlide(2)" alt="Snow">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <img class="constructionDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentConstructionSlide(3)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <img class="constructionDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentConstructionSlide(4)" alt="Northern Lights">
     </div>
   </div>
 </div>
 
-<div id="myModal" class="danceModal modal">
+<div id="myDanceModal" class="modal">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
-  </div>
-  <div class="modal-content">
+  </div>  <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="myDanceSlides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myDanceSlides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myDanceSlides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="mySlides">
+    <div class="myDanceSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusDanceSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusDanceSlides(1)">&#10095;</a>
 
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="danceCaption"> </p>
     </div>
 
 
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      <img class="danceDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentDanceSlide(1)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+      <img class="danceDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentDanceSlide(2)" alt="Snow">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <img class="danceDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentDanceSlide(3)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <img class="danceDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentDanceSlide(4)" alt="Northern Lights">
     </div>
   </div>
 </div>
 
-<div id="myModal" class="artModal modal">
+<div id="myArtModal" class="modal">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
-  </div>
-  <div class="modal-content">
+  </div>  <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="myArtSlides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myArtSlides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="myArtSlides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="mySlides">
+    <div class="myArtSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusArtSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusArtSlides(1)">&#10095;</a>
 
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="artCaption"> </p>
     </div>
 
 
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+      <img class="artDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentArtSlide(1)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+      <img class="artDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentArtSlide(2)" alt="Snow">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <img class="artDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentArtSlide(3)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/yee.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <img class="artDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentArtSlide(4)" alt="Northern Lights">
     </div>
   </div>
 </div>
-
   
-  <footer class="text-center">
+  <footer class="text-center page-footer">
     <a href="#myPage">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
