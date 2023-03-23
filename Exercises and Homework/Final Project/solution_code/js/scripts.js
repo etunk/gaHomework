@@ -17,6 +17,48 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
     });
+    var n = 0;
+
+    let prevSet = document.querySelectorAll(".image-set .prev");
+
+    for(i=0; i<prevSet.length; i++){
+      prevSet[i].addEventListener("click",function(e){
+        //searches backwards and looks for parents
+        
+        let parent = this.closest(".image-set");
+        let setName = parent.dataset.setname;
+        if (n > 3) {n = 0}
+        if (n < 1) {n = 4}
+        showSlides(n-=1,setName);
+
+      })
+    }
+
+    let nextSet = document.querySelectorAll(".image-set .next");
+
+    for(i=0; i<nextSet.length; i++){
+      nextSet[i].addEventListener("click",function(e){
+
+        //searches backwards and looks for parents
+    
+        let parent = this.closest(".image-set");
+        let setName = parent.dataset.setname;
+        if (n > 2) {n = -1}
+        showSlides(n+=1,setName);
+
+      })
+    }
+
+    let modalTriggerSet = document.querySelectorAll(".modal-trigger");
+
+    for(i=0; i<modalTriggerSet.length; i++){
+      console.log("AAA")
+      modalTriggerSet[i].addEventListener("click",function(e){
+        //searches backwards and looks for parents
+        let setName = this.dataset.setname;
+        displayModal(setName);
+      })
+    }
 })
 
 
@@ -27,95 +69,93 @@ document.querySelector(".learn-more").addEventListener("click", function(){
 
 })
 
-document.querySelector(".construction-modal-trigger").addEventListener("click", function(){
-    document.getElementById("myConstructionModal").style.display = "block";})
-
-document.querySelector(".dance-modal-trigger").addEventListener("click", function(){
-    document.getElementById("myDanceModal").style.display = "block";})
-
-document.querySelector(".art-modal-trigger").addEventListener("click", function(){
-    document.getElementById("myArtModal").style.display = "block";})
 
   
   function closeModal() {
-    document.getElementById("myDanceModal").style.display = "none";
-    document.getElementById("myArtModal").style.display = "none";
-    document.getElementById("myConstructionModal").style.display = "none";
+    document.getElementById("mydanceModal").style.display = "none";
+    document.getElementById("myartModal").style.display = "none";
+    document.getElementById("myconstructionModal").style.display = "none";
   }
   
   var slideIndex = 1;
   
-function plusConstructionSlides(n) {
-    showConstructionSlides(slideIndex += n);
+
+  
+
+    
+function currentConstructionSlide(n) {
+    showSlides(n,"construction");
   }
 
-function plusDanceSlides(n) {
-    showDanceSlides(slideIndex += n);
-  }
-function plusArtSlides(n) {
-    showArtSlides(slideIndex += n);
-  }
-  
-function currentConstructionSlide(n) {
-    showConstructionSlides(slideIndex = n);
-  }
-    
 function currentDanceSlide(n) {
-    showDanceSlides(slideIndex = n);
+    showSlides(n,"dance");
   }
     
 function currentArtSlide(n) {
-    showArtSlides(slideIndex = n);
+    showSlides(n,"art");
   }
   
-function showConstructionSlides(n) {
+
+
+  
+function showSlides(n,name) {
+    // Depending on name collect the respective elements
+    //
     var i;
-    var constructionSlides = document.getElementsByClassName("myConstructionSlides");
-    var constructionDots = document.getElementsByClassName("constructionDemo");
-    var constructionCaptionText = document.getElementById("constructionCaption");
-    if (n > constructionSlides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = constructionSlides.length}
-    for (i = 0; i < constructionSlides.length; i++) {
-        constructionSlides[i].style.display = "none";
+    var selectedSlides = document.getElementsByClassName("my"+name+"Slides");
+    var selectedDots = document.getElementsByClassName(name+"Demo");
+    var selectedText = document.getElementById(name+"Caption");
+
+    console.log(n);
+    console.log(selectedSlides)
+   
+    // var selectedSlides = "my"+name+"Slides"
+    //var slides document.getElementsByClassName(selectedSlides);
+    //emulate this for all vars
+    //use this model on all other seperated functions
+
+    for (i = 0; i < selectedSlides.length; i++) {
+        selectedSlides[i].style.display = "none";
     }
-    for (i = 0; i < constructionDots.length; i++) {
-        constructionDots[i].className = constructionDots[i].className.replace(" active", "");
+    for (i = 0; i < selectedDots.length; i++) {
+        selectedDots[i].className = selectedDots[i].className.replace(" active", "");
     }
-    constructionSlides[slideIndex-1].style.display = "block";
-    constructionDots[slideIndex-1].className += " active";
-    constructionCaptionText.innerHTML = constructionDots[slideIndex-1].alt;
+    console.log(n)
+    selectedSlides[n].style.display = "block";
+    selectedDots[n].className += " active";
+    selectedText.innerHTML = selectedDots[n].alt;
   }
-  function showDanceSlides(n) {
-    var i;
-    var danceSlides = document.getElementsByClassName("myDanceSlides");
-    var danceDots = document.getElementsByClassName("danceDemo");
-    var danceCaptionText = document.getElementById("danceCaption");
-    if (n > danceSlides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = danceSlides.length}
-    for (i = 0; i < danceSlides.length; i++) {
-        danceSlides[i].style.display = "none";
-    }
-    for (i = 0; i < danceDots.length; i++) {
-        danceDots[i].className = danceDots[i].className.replace(" active", "");
-    }
-    danceSlides[slideIndex-1].style.display = "block";
-    danceDots[slideIndex-1].className += " active";
-    danceCaptionText.innerHTML = danceDots[slideIndex-1].alt;
-  }
-  function showArtSlides(n) {
-    var i;
-    var artSlides = document.getElementsByClassName("myArtSlides");
-    var artDots = document.getElementsByClassName("artDemo");
-    var artCaptionText = document.getElementById("artCaption");
-    if (n > artSlides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = artSlides.length}
-    for (i = 0; i < artSlides.length; i++) {
-        artSlides[i].style.display = "none";
-    }
-    for (i = 0; i < artDots.length; i++) {
-        artDots[i].className = artDots[i].className.replace(" active", "");
-    }
-    artSlides[slideIndex-1].style.display = "block";
-    artDots[slideIndex-1].className += " active";
-    artCaptionText.innerHTML = artDots[slideIndex-1].alt;
-  }
+
+function displayModal(name){
+  var selectedModal = document.getElementById("my"+name+"Modal");
+  console.log(selectedModal);
+  selectedModal.style.display = "block";
+  showSlides(0,name)
+
+}
+
+
+
+
+
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const serviceID = "service_dhnwojh";
+      const templateID = "template_t3ze5wb";
+
+      // send the email here
+      emailjs.sendForm(serviceID, templateID, this).then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("FAILED...", error);
+        }
+      );
+    });
+
+
+

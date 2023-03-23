@@ -5,12 +5,36 @@
     -done
 
   ADD MY "PROJECTS" finding some guides to follow and build out
-    -dots game atags break on other pages
+    -use z index to fix "broken" atags
+      -fixed
     -adding YS Volunteer Signup Sheet
     -adding YS Volunteer Portal
 
   ADD CONTACT FORMS
     -Almost done need to link to collect info in JS
+    -done
+
+    991 px breakpoint
+
+
+  Final Day TODO:
+
+  ADD WANT TO SEE MY DOG LOGIC
+    -shouldnt be hard
+    -changing want to see my dog text to want to see me  
+    -updating images in slideshow
+    -fix css making slideshow squish when changing
+  
+  ADD APLICABLE VIDEOS AND IMAGES TO MODAL
+    -might have to upload videos to youtube
+    -just use youtube embed code in modal
+    -swag
+
+  READ THOUGH CODE 
+    -comment things describing what they do in every file
+  
+  its 4AM love yourself hehe
+  
 
 -->
 
@@ -30,6 +54,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+  (function(){
+    emailjs.init("lQtmJjIhnOSKpekvQ");
+  })();
+  </script>
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -76,12 +109,6 @@
       <div class="col-md-5">
       </div>
         <div class="col-md-7 justify-content-end">
-          <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -99,7 +126,7 @@
   <!-- Container (About Section) -->
   <div id="about" class="container-fluid bg-grey">
     <div class="row">
-      <div class="col-sm-8 about-me">
+      <div class="col-sm-8">
         <h2>What am I about?</h2><br>
         <div class="about-me-text">
         <h4>My name is Ethan Dunning I am a dancer, and student. I love to learn about everything and anything that I believe is interesting, and I find a ton interesting! I also love to create, which has definetly fueled my interest in the arts and sciences. </h4><br>
@@ -118,24 +145,28 @@
   <!-- Container (Services Section) -->
   <div id="projects" class="container-fluid text-center">
     <h2>Projects</h2>
-    <h4>Here are some programing projects I have completed from guides...<br>As I complete more, I will add more to this page!</h4>
+    <h4>Here are some  projects I have completed from guides and on my own...<br>As I learn and build more, I will add to this page!</h4>
     <br>
-    <div class="row slideanim">
+    <div class="row">
       <div class="col-sm-4">
-        <img src="images/yee.jpg" alt="my dog beans">
-        <h4>Tick Tac Toe</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+        <img src="images/SPARK_BLUE.png" alt="Young Storytellers Logo Blue">
+        <h4>Young Storytellers Volunteer Portal</h4>
+        <p>I designed this for the nonprofit I work for<br>It's a one stop shop for new volunteers!</p>
+        <a href="https://lookerstudio.google.com/reporting/c403e52e-18c9-4737-b0c7-92c36f218979/page/p_7pri3d2a2c" target="_blank" class="btn btn-warning" role="button">Check it out!</a>
+      </div>
+      
+      <div class="col-sm-4">
+        <img src="images/DOTS.png" alt="Dots Game Logo">
+        <h4>Dots Game</h4>
+        <p>We had this assigned to us as a homework for my General Assembly front end web development bootcamp!</p>
+        <a href="dots/dots-landing.html"  class="btn btn-warning" role="button">Play Me</a>
       </div>
       <div class="col-sm-4">
-        <img src="images/yee.jpg" alt="my dog beans">
-        <h4>Ball Game</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-        <a href="dots/dots-landing.html" class="btn btn-warning" role="button">Play Me</a>
-      </div>
-      <div class="col-sm-4">
-        <img src="images/yee.jpg" alt="my dog beans">
-        <h4>Hangman</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+        <img src="images/SPARK_YELLOW.png" alt="Young Storytellers Logo Yellow">
+        <h4>Young Storytellers Vol. Sign Up Form</h4>
+        <p>This is webpage I manage with an embedded dynamic html volunteer form built to collect new volunteer data!</p>
+        <a href="https://www.youngstorytellers.com/volunteer" target="_blank" class="btn btn-warning" role="button">Check it out!</a>
+
       </div>
     </div>
   </div>
@@ -146,24 +177,24 @@
     <h4>What I have created</h4>
     <div class="row text-center slideanim">
       <div class="col-sm-4">
-        <div class="thumbnail construction-modal-trigger">
-          <img src="images/yee.jpg" class="hover-shadow cursor">
-          <p><strong>Construction</strong></p>
-          <p>Yes, we built Paris</p>
+        <div class="thumbnail modal-trigger" data-setname="construction">
+          <img src="images/TOOLS.png" class="hover-shadow cursor" alt="A hammer and flat screwdriver">
+          <h4>Craftsmanship</h4>
+          <p>As a kid I learned some hard skills and have become handy, its been a lot of fun</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="thumbnail dance-modal-trigger">
-          <img src="images/yee.jpg" alt="my dog beans"  class="hover-shadow cursor danceModalClick">
-          <p><strong>Dance</strong></p>
-          <p>We built New York</p>
+        <div class="thumbnail modal-trigger" data-setname="dance">
+          <img src="images/dance.png" alt="A man dancing"  class="hover-shadow cursor danceModalClick">
+          <h4>Dance</h4>
+          <p>As a kid I could not play sports, so instead I started dancing... I havent stopped yet</p>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="thumbnail art-modal-trigger">
-          <img src="images/yee.jpg" alt="my dog beans" class="hover-shadow cursor artModalClick">
-          <p><strong>Digital Art</strong></p>
-          <p>Yes, San Fran is ours</p>
+        <div class="thumbnail modal-trigger" data-setname="art">
+          <img src="images/ART.png" alt="A yellow outline of a painters pallet" class="hover-shadow cursor artModalClick">
+          <h4>Digital Art</h4>
+          <p>As an older kid (durring the lockdowns) I found myself with a too much time, so I picked up drawing/Photoshop</p>
         </div>
       </div>
     </div>
@@ -181,38 +212,60 @@
     </div>
     <div class="row">
       <div class="col-md-6 ">
-        <form>
+        <form id="contact-form">
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Whats your name?</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            <label for="name">Whats your name?</label>
+            <input 
+            type="name"
+            name="name"
+            class="form-control" 
+            id="name-form" 
+            placeholder="enter your name">
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="email">Email address</label>
+            <input 
+            type="email" 
+            name="email"
+            class="form-control" 
+            id="email-form"
+            placeholder="name@example.com" >
           </div>
 
           <div class="form-group">
             <label class="form-label" for="phone">Phone number</label>
-            <input type="text" id="phone" class="form-control" placeholder="(###) ###-####" />
+            <input 
+            type="number"
+            name="phone" 
+            id="phone" 
+            class="form-control" 
+            placeholder="Enter phone number" >
           </div>
 
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Whats up!</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What can I help you with?"></textarea>
+            <label class="form-label" for="subject">Whats up!</label>
+            <textarea 
+            name="subject"
+            class="form-control" 
+            id="subject" 
+           rows="3" 
+           placeholder="What can I help you with?">
+            </textarea>
           </div>
-          <button class="btn btn-primary" type="submit">Submit form</button>
+          <button class="btn btn-primary" type="submit">Submit Form</button>
+
 
         </form>
         </div>
       <div class="col-md-6 ">
         <row>
-          <div class="col-md-12 social-link instagram">
+          <div class="col-md-12 social-link">
             <a href="https://www.instagram.com/ethandundun" target="_blank"><img src="images/Instagram_logo.png"></a>
           </div>
         </row>
         <row>
-          <div class="col-md-6 social-link">
+          <div class="col-md-6 social-link facebook ">
             <a href="https://www.facebook.com/kaka.bukaba" target="_blank"><img src="images/Facebook_logo.png"></a>
           </div>
           <div class="col-md-6 social-link">
@@ -224,38 +277,36 @@
     </div>
 
 
-<h2 style="text-align:center">Lightbox</h2>
 
-
-<div id="myConstructionModal" class="modal">
+<div id="myconstructionModal" class="modal image-set" data-setname="construction">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
   </div>  <div class="modal-content">
 
-    <div class="myConstructionSlides">
+    <div class="myconstructionSlides">
       <div class="numbertext">1 / 4</div>
       <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="myConstructionSlides">
+    <div class="myconstructionSlides">
       <div class="numbertext">2 / 4</div>
       <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="myConstructionSlides">
+    <div class="myconstructionSlides">
       <div class="numbertext">3 / 4</div>
       <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="myConstructionSlides">
+    <div class="myconstructionSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusConstructionSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusConstructionSlides(1)">&#10095;</a>
+    <a class="prev" >&#10094;</a>
+    <a class="next" >&#10095;</a>
 
     <div class="caption-container">
       <p id="constructionCaption"> </p>
@@ -263,49 +314,49 @@
 
 
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentConstructionSlide(1)" alt="Nature and sunrise">
+      <img class="constructionDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentConstructionSlide(0)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentConstructionSlide(2)" alt="Snow">
+      <img class="constructionDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentConstructionSlide(1)" alt="Snow">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentConstructionSlide(3)" alt="Mountains and fjords">
+      <img class="constructionDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentConstructionSlide(2)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentConstructionSlide(4)" alt="Northern Lights">
+      <img class="constructionDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentConstructionSlide(3)" alt="Northern Lights">
     </div>
   </div>
 </div>
 
-<div id="myDanceModal" class="modal">
+<div id="mydanceModal" class="modal image-set" data-setname="dance">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
   </div>  <div class="modal-content">
 
-    <div class="myDanceSlides">
+    <div class="mydanceSlides">
       <div class="numbertext">1 / 4</div>
       <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="myDanceSlides">
+    <div class="mydanceSlides">
       <div class="numbertext">2 / 4</div>
       <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="myDanceSlides">
+    <div class="mydanceSlides">
       <div class="numbertext">3 / 4</div>
       <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="myDanceSlides">
+    <div class="mydanceSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusDanceSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusDanceSlides(1)">&#10095;</a>
+    <a class="prev" >&#10094;</a>
+    <a class="next" >&#10095;</a>
 
     <div class="caption-container">
       <p id="danceCaption"> </p>
@@ -313,49 +364,49 @@
 
 
     <div class="column">
-      <img class="danceDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentDanceSlide(1)" alt="Nature and sunrise">
+      <img class="danceDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentDanceSlide(0)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentDanceSlide(2)" alt="Snow">
+      <img class="danceDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentDanceSlide(1)" alt="Snow">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentDanceSlide(3)" alt="Mountains and fjords">
+      <img class="danceDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentDanceSlide(2)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentDanceSlide(4)" alt="Northern Lights">
+      <img class="danceDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentDanceSlide(3)" alt="Northern Lights">
     </div>
   </div>
 </div>
 
-<div id="myArtModal" class="modal">
+<div id="myartModal" class="modal image-set" data-setname="art">
   <div class="close-modal row" onclick="closeModal()">
     
     <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
 
   </div>  <div class="modal-content">
 
-    <div class="myArtSlides">
+    <div class="myartSlides">
       <div class="numbertext">1 / 4</div>
       <img src="images/Facebook_logo.png" style="width:100%">
     </div>
 
-    <div class="myArtSlides">
+    <div class="myartSlides">
       <div class="numbertext">2 / 4</div>
       <img src="images/Instagram_logo.png" style="width:100%">
     </div>
 
-    <div class="myArtSlides">
+    <div class="myartSlides">
       <div class="numbertext">3 / 4</div>
       <img src="images/Tiktok_logo.png" style="width:100%">
     </div>
     
-    <div class="myArtSlides">
+    <div class="myartSlides">
       <div class="numbertext">4 / 4</div>
       <img src="images/yee.jpg" style="width:100%">
     </div>
     
-    <a class="prev" onclick="plusArtSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusArtSlides(1)">&#10095;</a>
+    <a class="prev" >&#10094;</a>
+    <a class="next" >&#10095;</a>
 
     <div class="caption-container">
       <p id="artCaption"> </p>
@@ -363,21 +414,22 @@
 
 
     <div class="column">
-      <img class="artDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentArtSlide(1)" alt="Nature and sunrise">
+      <img class="artDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentArtSlide(0)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentArtSlide(2)" alt="Snow">
+      <img class="artDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentArtSlide(1)" alt="Snow">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentArtSlide(3)" alt="Mountains and fjords">
+      <img class="artDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentArtSlide(2)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentArtSlide(4)" alt="Northern Lights">
+      <img class="artDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentArtSlide(3)" alt="Northern Lights">
     </div>
   </div>
 </div>
+  </div>
   
-  <footer class="text-center page-footer">
+  <footer class="text-center page-footer bg-grey">
     <a href="#myPage">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>

@@ -279,6 +279,10 @@ footer .glyphicon {
   margin-bottom: 20px;
   color: #f0ad4e;
 }
+footer p{
+  margin: 0 0 0 0;
+  padding-bottom: 5px;
+}
 .slide {
   animation-name: slide;
   -webkit-animation-name: slide;
@@ -290,7 +294,12 @@ footer .glyphicon {
 .social-link img{
   max-width: 150px;
 }
-
+@media screen and (max-width: 991px) {
+  .facebook{
+    padding-top: 60px;
+    padding-bottom: 60px;}
+  
+}
 .instagram{
   padding-bottom: 60px;
 }
