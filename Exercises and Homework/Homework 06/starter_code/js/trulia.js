@@ -8,19 +8,36 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 // Toggle the navigation
 
+document.querySelector(".trulia-nav-toggle").addEventListener("click",function(event){
+  event.preventDefault();
+  
+  let allNavUl = document.querySelectorAll(".trulia-nav > nav ul");
 
+  for(let i=0; i<allNavUl.length; i++){
+    allNavUl[i].classList.toggle('trulia-nav-mobilehide');
+  }
+});
 
 
 
 
 // Loop through all the cards
-    
-  // Add a click listener on each card
-      
+  for (var i=0; i < truliaCards.length; i++){
+      // Add a click listener on each card
+    truliaCards[i].addEventListener("click",function(){
+
       // Remove the featured class
-
-
+      for (var q=0; q<truliaCards.length; q++){
+        truliaCards[q].classList.remove("trulia-featured-grid-item");
+      }
       // Add the featured class on the one clicked on
+      this.classList.add("trulia-featured-grid-item");
+    });
+  }
+
+      
+
+
 
 
 
