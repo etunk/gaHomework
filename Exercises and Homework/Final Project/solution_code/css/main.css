@@ -43,6 +43,26 @@
   max-width: 1200px;
 }
 
+.modalslides{
+  background-color: black;
+  min-height: 500px;
+}
+.modalslides img{
+  min-height: 600px;
+}
+.modalslides iframe{
+  height: 600px;
+  width:890px;
+  margin-left: 40px;
+}
+
+
+.close-modal-exit{
+  max-height: 100px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
 /* The Close Button */
 .close {
   color: white;
@@ -81,16 +101,16 @@
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px 0 0 3px;
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
-.next {
+.next{
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
+
+
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
@@ -108,6 +128,9 @@
 }
 
 img {
+  margin: auto;    
+  display: block;
+  max-height: 400px;
   margin-bottom: -4px;
 }
 
@@ -119,14 +142,17 @@ img {
 }
 
 .constructionDemo, .artDemo, .danceDemo {
+  height: 150px;
+  width: auto !important;
   opacity: 0.6;
+  margin-bottom: 20px;
 }
 
 .active, .constructionDemo:hover, .artDemo:hover, .danceDemo:hover {
   opacity: 1;
 }
 
-img.hover-shadow {
+.hover-shadow img{
   transition: 0.3s;
 }
 
@@ -153,12 +179,8 @@ h4 {
   font-weight: 400;
   margin-bottom: 30px;
 }  
-img{
-  margin: auto;    
-  display: block;
-  max-height: 400px;
-}
-.jumbotron {
+
+.welcome-page {
   background-color: #282c29;
   color: #fff;
   padding: 150px 25px 250px 0px;
@@ -166,7 +188,8 @@ img{
 }
 
 .hero-block{
-  padding-left: 30px;
+  padding-top: 70px;
+  padding-left: 50px;
 }
 
 .bg-grey {
@@ -191,18 +214,12 @@ img{
   margin-bottom: 10px;
 }
 .carousel-indicators-controls{
-  padding-top: 75px;
+  padding-top: 15px;
   margin-bottom:-150px;
 }
 .carousel-control.right, .carousel-control.left {
   background-image: none;
   color: #f0ad4e;
-}
-.carousel-indicators li {
-  border-color: #f0ad4e;
-}
-.carousel-indicators li.active {
-  background-color: #f0ad4e;
 }
 .item h4 {
   font-size: 19px;
@@ -211,46 +228,9 @@ img{
   font-style: italic;
   margin: 70px 0;
 }
-.item span {
-  font-style: normal;
-}
-.panel {
-  border: 1px solid #f0ad4e; 
-  border-radius:0 !important;
-  transition: box-shadow 0.5s;
-}
-.panel:hover {
-  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-}
-.panel-footer .btn:hover {
-  border: 1px solid #f0ad4e;
-  background-color: #fff !important;
-  color: #f0ad4e;
-}
-.panel-heading {
-  color: #fff !important;
-  background-color: #f0ad4e !important;
-  padding: 25px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-.panel-footer {
-  background-color: white !important;
-}
-.panel-footer h3 {
-  font-size: 32px;
-}
-.panel-footer h4 {
-  color: #aaa;
-  font-size: 14px;
-}
-.panel-footer .btn {
-  margin: 15px 0;
-  background-color: #f0ad4e;
-  color: #fff;
+
+.about-me-image{
+  padding-top:0px;
 }
 .navbar {
   margin-bottom: 0;
@@ -310,21 +290,17 @@ footer p{
 @keyframes slide {
   0% {
     opacity: 0;
-    transform: translateY(70%);
   } 
   100% {
     opacity: 1;
-    transform: translateY(0%);
   }
 }
 @-webkit-keyframes slide {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(70%);
   } 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0%);
   }
 }
 @media screen and (max-width: 768px) {

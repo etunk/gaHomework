@@ -85,21 +85,21 @@
     </div>
   </nav>
   
-  <div class="jumbotron ">
-    <div class="row">
+  <div class="welcome-page">
+    <div class="row justify-content-center">
         <div class="col-md-5 col-lg-5 hero-block">
             <h1 class="block-heading">Ethan's Website!</h1>
             <p class="block-copy">Hi welcome to my website I do a lot of things. On this site I will try to give a brief overview of who I am and what I like to do! I hope you enjoy your time here :D</p>
-            <button type="button" class="btn btn-lg btn-warning read-more">Want to see my dog?</button>
+            <button type="button" class="btn btn-lg btn-warning see-dog">Want to see my dog?</button>
         </div>
         
         <div id="myCarousel" class="col-md-7 carousel slide text-center" data-ride="carousel">
         
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
-            <div class="item active"> <img src="images/yee.jpg" alt="my dog beans"> </div>
-            <div class="item"> <img src="images/yee.jpg" alt="my dog beans"> </div>
-            <div class="item"> <img src="images/yee.jpg" alt="my dog beans">  </div>
+            <div class="item active"> <img src="images/ethan_headshot.JPG" alt="ethans headshot smiling man"> </div>
+            <div class="item"> <img src="images/ethan_disney.JPG" alt="ethan at a dance job at disney dressed as a janitor"> </div>
+            <div class="item"> <img src="images/ethan_knotts.jpg" alt="ethan with face paint from his show at knotts">  </div>
           </div>
 
         </div>
@@ -135,7 +135,7 @@
         <!-- Here I am going to use javascript to populate the below area with more information about me-->
       </div>
       <div class="col-sm-4">
-        <img src="images/yee.jpg" alt="my dog beans">
+        <img src="images/ethan_headshot_laugh.JPG" alt="head shot of ethan laughing" class="about-me-image">
       </div>
     </div>
   </div>
@@ -147,7 +147,7 @@
     <h2>Projects</h2>
     <h4>Here are some  projects I have completed from guides and on my own...<br>As I learn and build more, I will add to this page!</h4>
     <br>
-    <div class="row">
+    <div class="row slideanim">
       <div class="col-sm-4">
         <img src="images/SPARK_BLUE.png" alt="Young Storytellers Logo Blue">
         <h4>Young Storytellers Volunteer Portal</h4>
@@ -281,28 +281,28 @@
 <div id="myconstructionModal" class="modal image-set" data-setname="construction">
   <div class="close-modal row" onclick="closeModal()">
     
-    <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
+    <img class="col-sm-2 close-modal-exit" src="images/exit-sign.png" >
 
   </div>  <div class="modal-content">
 
-    <div class="myconstructionSlides">
+    <div class="myconstructionSlides modalslides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/Facebook_logo.png" style="width:100%">
+      <img src="images/door_construction.jpg" style="width:auto">
     </div>
 
-    <div class="myconstructionSlides">
+    <div class="myconstructionSlides modalslides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/Instagram_logo.png" style="width:100%">
+      <img src="images/toilet_construction.jpg" style="width:auto">
     </div>
 
-    <div class="myconstructionSlides">
+    <div class="myconstructionSlides modalslides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/Tiktok_logo.png" style="width:100%">
+      <img src="images/piano_construction.jpg" style="width:auto">
     </div>
     
-    <div class="myconstructionSlides">
+    <div class="myconstructionSlides modalslides">
       <div class="numbertext">4 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lmZAojVmnqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     
     <a class="prev" >&#10094;</a>
@@ -314,16 +314,16 @@
 
 
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentConstructionSlide(0)" alt="Nature and sunrise">
+      <img class="constructionDemo cursor" src="images/door.png" style="width:100%" onclick="currentConstructionSlide(0)" alt="I built and hung this door with a few of my friends! I also had to cut out a hinge on the metal door frame.">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentConstructionSlide(1)" alt="Snow">
+      <img class="constructionDemo cursor" src="images/toilet.jpeg" style="width:100%" onclick="currentConstructionSlide(1)" alt="We took apart this bathroom and fixed it up. Utilizing a shower drain as a drain for the new toilet we installed.">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentConstructionSlide(2)" alt="Mountains and fjords">
+      <img class="constructionDemo cursor" src="images/piano.jpg" style="width:100%" onclick="currentConstructionSlide(2)" alt="I had to build this piano on a 6ft X 6ft moving platform. It was able to support the weight of three people and move!">
     </div>
     <div class="column">
-      <img class="constructionDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentConstructionSlide(3)" alt="Northern Lights">
+      <img class="constructionDemo cursor" src="images/Vibe.png" style="width:100%" onclick="currentConstructionSlide(3)" alt="Check out the piano in action!">
     </div>
   </div>
 </div>
@@ -331,28 +331,28 @@
 <div id="mydanceModal" class="modal image-set" data-setname="dance">
   <div class="close-modal row" onclick="closeModal()">
     
-    <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
+    <img class="col-sm-2 close-modal-exit" src="images/exit-sign.png" >
 
   </div>  <div class="modal-content">
 
-    <div class="mydanceSlides">
+    <div class="mydanceSlides modalslides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/Facebook_logo.png" style="width:100%">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/oXCTtw2jfl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
-    <div class="mydanceSlides">
+    <div class="mydanceSlides modalslides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/Instagram_logo.png" style="width:100%">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hmjHO5CHByY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
-    <div class="mydanceSlides">
+    <div class="mydanceSlides modalslides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/Tiktok_logo.png" style="width:100%">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/m1ZX-AyAzoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     
-    <div class="mydanceSlides">
+    <div class="mydanceSlides modalslides">
       <div class="numbertext">4 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/rUe4V2paAhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     
     <a class="prev" >&#10094;</a>
@@ -364,16 +364,16 @@
 
 
     <div class="column">
-      <img class="danceDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentDanceSlide(0)" alt="Nature and sunrise">
+      <img class="danceDemo cursor" src="images/floMilli_cover.jpeg" style="width:100%" onclick="currentDanceSlide(0)" alt="A piece I choreographed with two friends. Song: Concieted Artist: Flo Milli">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentDanceSlide(1)" alt="Snow">
+      <img class="danceDemo cursor" src="images/More_Black_Superheros.jpg" style="width:100%" onclick="currentDanceSlide(1)" alt="A piece I choreographed to teach. Song: Ratchet Boog Artist: Westside Boogie">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentDanceSlide(2)" alt="Mountains and fjords">
+      <img class="danceDemo cursor" src="images/Mr_Moral.jpeg" style="width:100%" onclick="currentDanceSlide(2)" alt="A piece I choreographed to showcase. Song: Count Me Out Artist: Kendrick Lamar">
     </div>
     <div class="column">
-      <img class="danceDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentDanceSlide(3)" alt="Northern Lights">
+      <img class="danceDemo cursor" src="images/Blonde.jpeg" style="width:100%" onclick="currentDanceSlide(3)" alt="A piece I choreographed to do something different. Song: Self Control Artist: Frank Ocean">
     </div>
   </div>
 </div>
@@ -381,28 +381,29 @@
 <div id="myartModal" class="modal image-set" data-setname="art">
   <div class="close-modal row" onclick="closeModal()">
     
-    <img class="col-sm-2" src="images/yee.jpg" style="width:150px; height:150px">
+    <img class="col-sm-2 close-modal-exit" src="images/exit-sign.png" >
 
-  </div>  <div class="modal-content">
+  </div>  
+  <div class="modal-content">
 
-    <div class="myartSlides">
+    <div class="myartSlides modalslides">
       <div class="numbertext">1 / 4</div>
-      <img src="images/Facebook_logo.png" style="width:100%">
+      <img src="images/mac_art.jpg" style="width:100%">
     </div>
 
-    <div class="myartSlides">
+    <div class="myartSlides modalslides">
       <div class="numbertext">2 / 4</div>
-      <img src="images/Instagram_logo.png" style="width:100%">
+      <img src="images/Jacket_art.JPG" style="width:100%">
     </div>
 
-    <div class="myartSlides">
+    <div class="myartSlides modalslides">
       <div class="numbertext">3 / 4</div>
-      <img src="images/Tiktok_logo.png" style="width:100%">
+      <img src="images/punk_art.PNG" style="width:100%">
     </div>
     
-    <div class="myartSlides">
+    <div class="myartSlides modalslides">
       <div class="numbertext">4 / 4</div>
-      <img src="images/yee.jpg" style="width:100%">
+      <img src="images/myBrother_art.png" style="width:100%">
     </div>
     
     <a class="prev" >&#10094;</a>
@@ -414,16 +415,16 @@
 
 
     <div class="column">
-      <img class="artDemo cursor" src="images/Facebook_logo.png" style="width:100%" onclick="currentArtSlide(0)" alt="Nature and sunrise">
+      <img class="artDemo cursor" src="images/mac_art.jpg" style="width:100%" onclick="currentArtSlide(0)" alt="This is a drawing of two friends who make music that has inspired me.">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/Instagram_logo.png" style="width:100%" onclick="currentArtSlide(1)" alt="Snow">
+      <img class="artDemo cursor" src="images/Jacket_art.JPG" style="width:100%" onclick="currentArtSlide(1)" alt="I designed this jacket for some of my friends over the pandemic!">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/Tiktok_logo.png" style="width:100%" onclick="currentArtSlide(2)" alt="Mountains and fjords">
+      <img class="artDemo cursor" src="images/punk_art.PNG" style="width:100%" onclick="currentArtSlide(2)" alt="This is a drawing of a photo I like.">
     </div>
     <div class="column">
-      <img class="artDemo cursor" src="images/yee.jpg" style="width:100%" onclick="currentArtSlide(3)" alt="Northern Lights">
+      <img class="artDemo cursor" src="images/myBrother_art.png" style="width:100%" onclick="currentArtSlide(3)" alt="Art I made for my brothers graduation. Hes majored in computer science.">
     </div>
   </div>
 </div>

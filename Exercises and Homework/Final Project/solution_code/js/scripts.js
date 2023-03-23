@@ -61,11 +61,33 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
 })
 
+document.querySelector(".see-dog").addEventListener("click",function(){
+  var i=0
+  var carouselPictures = document.querySelectorAll(".carousel-inner .item img");
+  var myPhotos = ["images/ethan_headshot.JPG","images/ethan_disney.JPG","images/ethan_knotts.jpg"];
+  var dogPhotos = ["images/beans_birthday.jpg","images/beans_sleep.jpg","images/beans_pancake.jpg"];
+  
+  if (carouselPictures[i].getAttribute("src") == myPhotos[i]){
+  for(i; i<carouselPictures.length; i++){
+    carouselPictures[i].setAttribute('src', dogPhotos[i]);
+  }
+  console.log("A")
+  document.querySelector(".see-dog").innerHTML="Want to see me again?";
+  } else{
+  for(i; i<carouselPictures.length; i++){
+      carouselPictures[i].setAttribute("src", myPhotos[i]);
+    }
+    console.log("B")
+    document.querySelector(".see-dog").innerHTML="Want to see my dog?";
+  }
+  })
 
 document.querySelector(".learn-more").addEventListener("click", function(){
     document.querySelector(".about-me-text").innerHTML += '<p class="extra-text"> I graduated from Cal Poly Pomona in 2022 with a degree in Business Administration, emphasis Computer Information Systems. While in this program I learned about Big Data and Data Analysis! <br> I also dedicated a lot of time to dance while in college. I danced on a dance team called Zero Below and currently dance on both Snowtorious and Snowmies. I have gotten a lot of dance opportunites thanks to my time with these teams. I danced in 2021 and 2022 at Knotts Scary Farm as a part of the stage shows "Doce De La Noche" and "De Carnival Du Grotesque". Another notable moment was dancing at Disneyland as part of a flash mob for the 100 Year Celebration!</p>';
 
     document.querySelector(".about-me-text").classList.remove('about-me-text');
+    document.querySelector(".about-me-image").style.marginTop="80px"
+    document.querySelector(".learn-more").style.display="none";
 
 })
 
